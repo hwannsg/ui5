@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset= "UTF-8"/>
+       <title>Study1</title>
+       <script
+         id = "sap-ui-bootstrap"               // sap bootstrap이라고 명시적으로 알려줍니다.
+         src= "../resources/sap-ui-core.js"    //이놈이 [SAPUI5] JavaScript Library라는 군요[jQuery가 여기들어있음]
+         data-sap-ui-theme ="sap_bluecrystal"     //이놈의 기본테마는 [sap_belize]입니다.
+         data-sap-ui-libs = "sap.m"           //이놈의 [User Interface]가 담겨있는 Library [sap.m]이라 지정
+         data-sap-ui-compatVersion = "edge"   // [호환성버젼]을 [edge]로 지정.
+         data-sap-ui-resourceroots = '{ "hwang": "" }'>      
+		</script>
+		
+        <link rel="stylesheet" type = "text/css" href = "css/style.css">
+		
+		<script>
+	        sap.ui.getCore().attachInit(function () {  //이 Event는 부트스트랩이 완료되면 자동으로 호출된다.
+	            new sap.m.Shell({
+	              app : new sap.ui.core.ComponentContainer({
+	            	height : "100%",
+	                name : "hwang"
+	              })
+	            }).placeAt("content");
+	        });
+        </script>
+    </head>
+    
+	<body class="sapUiBody" id="content">
+	</body>
+	
+</html>

@@ -1,0 +1,47 @@
+<core:View xmlns:core="sap.ui.core" 
+           xmlns:l="sap.ui.layout"
+		   xmlns:mvc="sap.ui.core.mvc" 
+		   xmlns="sap.m"
+		   controllerName="hwang.controller.Login" 
+		   xmlns:html="http://www.w3.org/1999/xhtml">
+     <App ID = "hwang">            
+      <pages>                                                  
+         <Page title="{i18n>loginMainTiTle}"
+               class="sapUiContentPadding"
+               width = "100%"
+               xmlns = "sap.m">
+         <content>
+			<l:VerticalLayout class="sapUiContentPadding"
+							  width="50%">
+				<l:content>				
+					<Label text="ID" labelFor="idInput"/>
+					<Input
+						id="idInput"
+						placeholder="Enter ID ..." />
+						
+					<Label text="Password" labelFor="passwordInput"/>
+					<Input
+						id="passwordInput"
+						type="Password"
+						placeholder="Enter password ..." />
+				<HBox>	
+					<Button
+                       text="login"
+                       press="onLogin"/>
+ 					<Button
+                       text="Id/Pwd Search"
+                       press="onSearch"/>
+                    <Button
+                       text="Pwd Cleam"
+                       press="onClearPwd"/> 
+                 </HBox>	
+				</l:content>
+
+			</l:VerticalLayout>
+  		
+
+      	  </content>
+         </Page>
+      </pages>
+   </App>
+</core:View>
